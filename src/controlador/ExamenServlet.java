@@ -1,14 +1,18 @@
 package controlador;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import modelo.DataManager;
 
@@ -48,6 +52,19 @@ public class ExamenServlet extends HttpServlet {
 		}
 	}
 
+	protected void showList(HttpServletRequest request) {
+		HttpSession session = request.getSession(true);
+		ArrayList<String> enlaces = new ArrayList<String>();
+		enlaces.add("www.google.es");
+		enlaces.add("www.terra.es");
+		enlaces.add("www.canarias7.es");
+		Iterator<String> urls = enlaces.iterator();
+		while (urls.hasNext()) {
+			String elemento = urls.next();
+			System.out.print(elemento + " / ");
+		}
+	}
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -64,8 +81,15 @@ public class ExamenServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String base = "/jsp/";
+		String url = base + "user.jsp";
+		showList(request);
+		// recuperar datamanager del contexto
+		DataManager datamanager = (DataManager) request.getServletContext().getAttribute("dataManager");
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher(url);
+		requestDispatcher.forward(request, response);
 	}
 
 }

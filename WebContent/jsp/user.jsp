@@ -7,39 +7,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		if (request.getParameter("name") == null && request.getParameter("pass") == null) {
-	%>
-	<center>
-		<H2>User Info Request Form</H2>
-		<form METHOD="GET" ACTION="user.jsp">
-			<P>
-				Usuario: <input type="text" name="user" size=26>
-			<P>
-				Contraseña: <input type="text" name="pass" size=26>
-			<P>
-				<input type="submit" value="Process">
-		</form>
-	</center>
-	<%
-		} else {
-	%>
-	<%!String user, pass;%>
-	<%
-		user = request.getParameter("user");
-			pass = request.getParameter("pass");
-	%>
-	<P>
-		
-	<P>
-		<B>user</B>:
-		<%=user%>
-	<P>
-		<B>pass</B>:
-		<%=pass%>
-		<%
-			}
-		%>
+	<div class="content">
+  <h2>Enlaces</h2>
+
+      <table>
+        <tr>
+          <td>
+            <a href="www.google.es"></a>
+            </td>
+          <td>
+            <b><%=%></b><br/>
+            <%=%><br/>
+        
+            </td>
+          </tr>
+        <tr>
+          <td colspan="2" align="right">
+            
+            </td>
+          </tr>
+        </table>
+
+  </div>
 	
 </body>
 </html>

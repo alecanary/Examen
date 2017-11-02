@@ -10,10 +10,6 @@
 		<servlet-name>ExamenServlet</servlet-name>
 		<servlet-class>controlador.ExamenServlet</servlet-class>
 		<init-param>
-			<param-name>base</param-name>
-			<param-value>/controlador/ejer1</param-value>
-		</init-param>
-		<init-param>
 			<param-name>jdbcDriver</param-name>
 			<param-value>com.mysql.jdbc.Driver</param-value>
 		</init-param>
