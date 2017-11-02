@@ -6,16 +6,12 @@
 	<servlet>
 		<description>
 		</description>
-		<display-name>Ejercicio1Servlet</display-name>
-		<servlet-name>Ejercicio1Servlet</servlet-name>
-		<servlet-class>controlador.Ejercicio1Servlet</servlet-class>
+		<display-name>ExamenServlet</display-name>
+		<servlet-name>ExamenServlet</servlet-name>
+		<servlet-class>controlador.ExamenServlet</servlet-class>
 		<init-param>
 			<param-name>base</param-name>
 			<param-value>/controlador/ejer1</param-value>
-		</init-param>
-		<init-param>
-			<param-name>imageURL</param-name>
-			<param-value>/controlador/images/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>jdbcDriver</param-name>
@@ -35,7 +31,8 @@
 		</init-param>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Ejercicio1Servlet</servlet-name>
+		<servlet-name>ExamenServlet</servlet-name>
 		<url-pattern>/controlador/*</url-pattern>
 	</servlet-mapping>
+	
 </web-app>

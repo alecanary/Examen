@@ -8,10 +8,8 @@
 </head>
 <body>
 <%
-		response.sendRedirect("ejercicio1");
+		response.sendRedirect("examen");
 	%>
-	<%
-		response.sendRedirect("ejercicio2");
-	%>
+	
 </body>
 </html>
